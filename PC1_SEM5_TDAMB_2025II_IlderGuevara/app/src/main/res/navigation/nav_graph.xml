@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/solicitudFragment">
+
+    <fragment
+        android:id="@+id/solicitudFragment"
+        android:name="com.example.pc1_sem5_tdamb_2025ii_ilderguevara.SolicitudFragment"
+        android:label="fragment_solicitud"
+        tools:layout="@layout/fragment_solicitud" >
+
+        <action
+            android:id="@+id/action_solicitudFragment_to_aprobadoFragment"
+            app:destination="@id/aprobadoFragment" />
+
+
+        <action
+            android:id="@+id/action_solicitudFragment_to_advertenciaFragment"
+            app:destination="@id/advertenciaFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/aprobadoFragment"
+        android:name="com.example.pc1_sem5_tdamb_2025ii_ilderguevara.AprobadoFragment"
+        android:label="fragment_aprobado"
+        tools:layout="@layout/fragment_aprobado" >
+
+
+        <action
+            android:id="@+id/action_aprobadoFragment_to_solicitudFragment"
+            app:destination="@id/solicitudFragment"
+            app:popUpTo="@id/solicitudFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/advertenciaFragment"
+        android:name="com.example.pc1_sem5_tdamb_2025ii_ilderguevara.AdvertenciaFragment"
+        android:label="fragment_advertencia"
+        tools:layout="@layout/fragment_advertencia" />
+</navigation>
