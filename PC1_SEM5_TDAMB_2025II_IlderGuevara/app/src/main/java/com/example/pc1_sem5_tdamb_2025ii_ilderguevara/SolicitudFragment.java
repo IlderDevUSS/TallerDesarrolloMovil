@@ -104,12 +104,13 @@ public class SolicitudFragment extends Fragment {
         NavController navController = Navigation.findNavController(requireView());
 
         if (resultado.equals("APROBADO")) {
-            // Navega a AprobadoFragment
             navController.navigate(SolicitudFragmentDirections.actionSolicitudFragmentToAprobadoFragment());
         } else {
-            // Navega a AdvertenciaFragment (para DESAPROBADO y PENDIENTE)
-            // Se puede pasar el resultado si es necesario, pero la práctica solo pide una pantalla.
-            navController.navigate(SolicitudFragmentDirections.actionSolicitudFragmentToAdvertenciaFragment());
+            // CORRECCIÓN: Pasamos el resultado (sea "PENDIENTE" o "DESAPROBADO")
+            // Reconstruye el proyecto para que SolicitudFragmentDirections se actualice.
+            SolicitudFragmentDirections.ActionSolicitudFragmentToAdvertenciaFragment action;
+            action = SolicitudFragmentDirections.actionSolicitudFragmentToAdvertenciaFragment(resultado);
+            navController.navigate(action);
         }
     }
 }

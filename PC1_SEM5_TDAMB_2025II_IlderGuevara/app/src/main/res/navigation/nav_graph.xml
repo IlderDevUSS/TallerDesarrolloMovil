@@ -40,5 +40,16 @@
         android:id="@+id/advertenciaFragment"
         android:name="com.example.pc1_sem5_tdamb_2025ii_ilderguevara.AdvertenciaFragment"
         android:label="fragment_advertencia"
-        tools:layout="@layout/fragment_advertencia" />
+        tools:layout="@layout/fragment_advertencia" >
+
+        <argument
+            android:name="resultado"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_advertenciaFragment_to_solicitudFragment"
+            app:destination="@id/solicitudFragment"
+            app:popUpTo="@id/solicitudFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

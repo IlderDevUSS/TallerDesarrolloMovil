@@ -10,52 +10,56 @@
     android:background="#FFF9C4"
     tools:context=".AdvertenciaFragment">
 
-<TextView
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:text="SOLICITUD PENDIENTE DE VISITA"
-android:textSize="24sp"
-android:textStyle="bold"
-android:textColor="#FBC02D"
-android:gravity="center"
-android:layout_marginBottom="40dp" />
-
-<TextView
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:text="Necesitamos comunicarnos contigo para especificar tu dirección y coordinar la visita:"
-android:gravity="center"
-android:layout_marginBottom="16dp" />
-
-        <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:hint="Dirección de Domicilio">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etDireccion"
+        <TextView
+            android:id="@+id/tvAdvertenciaTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textMultiLine" />
+            android:text="SOLICITUD PENDIENTE DE VISITA"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FBC02D"
+            android:gravity="center"
+            android:layout_marginBottom="40dp" />
+
+        <TextView
+            android:id="@+id/tvSubtitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Necesitamos comunicarnos contigo para especificar tu dirección y coordinar la visita:"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="Dirección de Domicilio">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:hint="Teléfono Celular">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etTelefono"
+            android:id="@+id/layoutTelefono"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="phone" />
+            android:layout_marginBottom="24dp"
+            android:hint="Teléfono Celular">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-        android:id="@+id/btnConfirmarContacto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CONFIRMAR DATOS DE CONTACTO"
-        android:padding="12dp" />
+            android:id="@+id/btnConfirmarContacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONFIRMAR DATOS DE CONTACTO"
+            android:padding="12dp" />
 
 </LinearLayout>
