@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registroFragment">
+
+    <fragment
+        android:id="@+id/registroFragment"
+        android:name="com.example.ec_parcial_tdamb_2025ii_ilderguevara.RegistroFragment"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" >
+        <action
+            android:id="@+id/action_registroFragment_to_pagoFragment"
+            app:destination="@id/pagoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pagoFragment"
+        android:name="com.example.ec_parcial_tdamb_2025ii_ilderguevara.PagoFragment"
+        android:label="fragment_pago"
+        tools:layout="@layout/fragment_pago" >
+        <action
+            android:id="@+id/action_pagoFragment_to_resumenFragment"
+            app:destination="@id/resumenFragment"
+            app:popUpTo="@id/registroFragment" />
+
+        <argument
+            android:name="nombre"
+            app:argType="string" />
+        <argument
+            android:name="correo"
+            app:argType="string" />
+        <argument
+            android:name="escuela"
+            app:argType="string" />
+        <argument
+            android:name="sexo"
+            app:argType="string" />
+        <argument
+            android:name="deporte"
+            app:argType="string" />
+        <argument
+            android:name="tipoParticipante"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resumenFragment"
+        android:name="com.example.ec_parcial_tdamb_2025ii_ilderguevara.ResumenFragment"
+        android:label="fragment_resumen"
+        tools:layout="@layout/fragment_resumen" >
+
+        <argument
+            android:name="nombre"
+            app:argType="string" />
+        <argument
+            android:name="correo"
+            app:argType="string" />
+        <argument
+            android:name="tipoParticipante"
+            app:argType="string" />
+        <argument
+            android:name="montoPagado"
+            app:argType="float" />
+    </fragment>
+</navigation>

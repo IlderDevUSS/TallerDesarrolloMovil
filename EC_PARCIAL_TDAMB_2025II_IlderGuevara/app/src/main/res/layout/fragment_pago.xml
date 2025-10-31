@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pagoLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    tools:context=".PagoFragment"
+    tools:background="#E0F7FA"> <TextView
+    android:id="@+id/tvTituloPago"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="22sp"
+    android:textStyle="bold"
+    android:layout_marginBottom="16dp"
+    tools:text="Suscripción Jugador"/>
+
+    <TextView
+        android:id="@+id/tvCostoSuscripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginBottom="24dp"
+        tools:text="Costo: S/ 50.00"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Monto a pagar (S/.)">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMontoIngresado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvVuelto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vuelto: S/ 0.00"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"/>
+
+    <Button
+        android:id="@+id/btnPagar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pagar"
+        android:layout_marginTop="32dp"/>
+
+</LinearLayout>
